@@ -12,7 +12,7 @@ public class UserDTOForUpdate extends UserDTO{
         setSurname(user.getSurname());
         setEmail(user.getEmail());
         setUrl(user.getUrl());
-        setStatus(user.getStatus());
+        setOnline(user.isStatus());
         setId(user.getId());
     }
 
@@ -23,7 +23,7 @@ public class UserDTOForUpdate extends UserDTO{
         user.setSurname(getSurname());
         user.setEmail(getEmail());
         user.setUrl(getUrl());
-        user.setStatus(getStatus());
+        user.setStatus(isOnline());
         user.setId(getId());
         return user;
 

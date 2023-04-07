@@ -18,5 +18,5 @@ public abstract class UserDTO {
     private String email;
     @NotBlank
     private String url;
-    private Boolean status;
+    private boolean online;
 }

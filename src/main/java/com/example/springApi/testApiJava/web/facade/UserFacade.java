@@ -25,8 +25,8 @@ public class UserFacade {
 
     public UpdateUserStatusResponseDTO updateUserStatus(Long id){
         User user=userService.getUser(id);
-        user.setStatus(!user.getStatus());
+        user.setStatus(!user.isStatus());
         userService.updateUserStatus(user);
-        return new UpdateUserStatusResponseDTO(id,!user.getStatus(),user.getStatus());
+        return new UpdateUserStatusResponseDTO(id,!user.isStatus(),user.isStatus());
     }
 }

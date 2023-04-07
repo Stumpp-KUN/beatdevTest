@@ -56,6 +56,6 @@ public class UserServiceTest {
     User user=getUser();
     when(userService.updateUserStatus(any(User.class))).thenReturn(user);
     User tempUser=userService.updateUserStatus(user);
-    assertTrue(tempUser.getStatus());
+    assertTrue(tempUser.isStatus());
     }
 }

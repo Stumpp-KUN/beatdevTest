@@ -15,7 +15,7 @@ public class UserDTOForCreate extends UserDTO{
         setEmail(user.getEmail());
         setUrl(user.getUrl());
         setPassword(user.getPassword());
-        setStatus(user.getStatus());
+        setOnline(user.isStatus());
     }
 
     public UserDTOForCreate(String name,String surname,String email,String url,Boolean online,String password){
@@ -23,7 +23,7 @@ public class UserDTOForCreate extends UserDTO{
         setSurname(surname);
         setUrl(url);
         setEmail(email);
-        setStatus(online);
+        setOnline(online);
         setPassword(password);
     }
 
@@ -33,7 +33,7 @@ public class UserDTOForCreate extends UserDTO{
         user.setSurname(getSurname());
         user.setEmail(getEmail());
         user.setUrl(getUrl());
-        user.setStatus(getStatus());
+        user.setStatus(isOnline());
         user.setPassword(getPassword());
         return user;
     }

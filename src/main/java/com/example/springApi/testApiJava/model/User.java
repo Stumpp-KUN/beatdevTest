@@ -16,7 +16,9 @@ public class User {
     private String surname;
     @Column(unique = true)
     private String email;
-    private Boolean status;
+    private boolean status;
     private String url; //работал с base64, но видимо тут принимаю ссылку в интернете на хрананение изобр
     private String password;
+
+
 }
